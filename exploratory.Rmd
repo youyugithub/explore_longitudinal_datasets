@@ -1,0 +1,25 @@
+---
+title: "exploratory"
+output: rmarkdown::github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r cars}
+library(ggplot2)
+library(joineRML)
+data(pbc2)
+theme_set(theme_bw())
+names(pbc2)
+ggplot(pbc2,aes(x=year,y=serBilir,color=status,group=id))+geom_line()
+ggplot(pbc2,aes(x=year,y=serChol,color=status,group=id))+geom_line()
+ggplot(pbc2,aes(x=year,y=albumin,color=status,group=id))+geom_line()
+ggplot(pbc2,aes(x=year,y=alkaline,color=status,group=id))+geom_line()
+ggplot(pbc2,aes(x=year,y=SGOT,color=status,group=id))+geom_line()
+ggplot(pbc2,aes(x=year,y=platelets,color=status,group=id))+geom_line()
+ggplot(pbc2,aes(x=year,y=prothrombin,color=status,group=id))+geom_line()
+```
